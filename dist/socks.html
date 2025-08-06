@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>socks</title>
+    <link rel="icon" href="/images/logo.png">
+    <link rel="stylesheet" href="css/t-shirts.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css" integrity="sha512-DxV+EoADOkOygM4IR9yXP8Sb2qwgidEmeqAEmDKIOfPRQZOWbXCzLC6vjbZyy0vPisbH2SyW27+ddLVCN+OMzQ==" crossorigin="anonymous" referrerpolicy="no-referrer"/>
+</head>
+<body>
+    <header>
+               <img class="top_logo" src="/images/logo_noBG.png" alt="logo" width="200" height="100">
+               <nav>
+                    <ul>
+                         <li onclick="window.location.href='index.html'">Home</li>
+                         <li onclick="window.location.href='shop.html'">Shop</li>
+                         <li class="my_cart" onclick="window.location.href='cart.html'">My Cart <span class="items_counter">0</span></li>
+                    </ul>
+               </nav>
+          </header>
+
+
+          <div class="popup">
+                <i class="fa-solid fa-close close_popup"></i>
+                <div id="popup_card">
+                        
+                            
+                        </div>
+
+
+                        <div id="add_to_cart_btn" class="add_to_cart_btn">
+                            <div class="feedback">
+                                <p>Item added to your cart </p>
+                                <img src="/gifs/wired-outline-146-trolley-hover-jump.gif" alt="" height="40" width="40">
+                            </div>
+                           <div id="add" class="add"> Add to cart <i class="fa-solid fa-cart-shopping add_to_cart"></i> </div>
+                        </div>
+
+
+                    </div>
+                    
+                    <div class="overlay"></div>
+                    
+          <main>
+            <section class="category fade">
+                <h1>Socks</h1>
+                <div id="cards_container" class="cards_container">
+
+                </div>
+
+               
+            </section>
+          </main>
+
+          <script>
+            const products = [
+    {
+        img: '/images/black socks.avif',
+        name: "Get the socks of your type",
+        price: 5.5,
+    },
+    {
+        img: "/images/black socks.avif",
+        name: "Get the socks of your type",
+        price: 5.5
+    },
+    {
+        img: "/images/black socks.avif",
+        name: "Get the socks of your type",
+        price: 5.5
+    },
+    {
+        img: '/images/black socks.avif',
+        name: "Get the socks of your type",
+        price: 5.5,
+    },
+    {
+        img: "/images/black socks.avif",
+        name: "Get the socks of your type",
+        price: 5.5
+    },
+    {
+        img: "/images/black socks.avif",
+        name: "Get the socks of your type",
+        price: 5.5
+    },
+    {
+        img: '/images/black socks.avif',
+        name: "Get the socks of your type",
+        price: 5.5,
+    },
+    {
+        img: "/images/black socks.avif",
+        name: "Get the socks of your type",
+        price: 5.5
+    },
+    {
+        img: "/images/black socks.avif",
+        name: "Get the socks of your type",
+        price: 5.5
+    },
+    {
+        img: '/images/black socks.avif',
+        name: "Get the socks of your type",
+        price: 5.5,
+    },
+    {
+        img: "/images/black socks.avif",
+        name: "Get the socks of your type",
+        price: 5.5
+    },
+    {
+        img: "/images/black socks.avif",
+        name: "Get the socks of your type",
+        price: 5.5
+    },
+    {
+        img: '/images/black socks.avif',
+        name: "Get the socks of your type",
+        price: 5.5,
+    },
+    {
+        img: "/images/black socks.avif",
+        name: "Get the socks of your type",
+        price: 5.5
+    },
+    {
+        img: "/images/black socks.avif",
+        name: "Get the socks of your type",
+        price: 5.5
+    },
+    {
+        img: '/images/black socks.avif',
+        name: "Get the socks of your type",
+        price: 5.5,
+    },
+    {
+        img: "/images/black socks.avif",
+        name: "Get the socks of your type",
+        price: 5.5
+    },
+    {
+        img: "/images/black socks.avif",
+        name: "Get the socks of your type",
+        price: 5.5
+    },
+    {
+        img: '/images/black socks.avif',
+        name: "Get the socks of your type",
+        price: 5.5,
+    },
+    {
+        img: "/images/black socks.avif",
+        name: "Get the socks of your type",
+        price: 5.5
+    },
+    {
+        img: "/images/black socks.avif",
+        name: "Get the socks of your type",
+        price: 5.5
+    },
+    {
+        img: '/images/black socks.avif',
+        name: "Get the socks of your type",
+        price: 5.5,
+    },
+    {
+        img: "/images/black socks.avif",
+        name: "Get the socks of your type",
+        price: 5.5
+    },
+    {
+        img: "/images/black socks.avif",
+        name: "Get the socks of your type",
+        price: 5.5
+    },
+    {
+        img: '/images/black socks.avif',
+        name: "Get the socks of your type",
+        price: 5.5,
+    },
+    {
+        img: "/images/black socks.avif",
+        name: "Get the socks of your type",
+        price: 5.5
+    },
+    {
+        img: "/images/black socks.avif",
+        name: "Get the socks of your type",
+        price: 5.5
+    },
+    {
+        img: '/images/black socks.avif',
+        name: "Get the socks of your type",
+        price: 5.5,
+    },
+    {
+        img: "/images/black socks.avif",
+        name: "Get the socks of your type",
+        price: 5.5
+    },
+    {
+        img: "/images/black socks.avif",
+        name: "Get the socks of your type",
+        price: 5.5
+    },
+    {
+        img: '/images/black socks.avif',
+        name: "Get the socks of your type",
+        price: 5.5,
+    },
+    {
+        img: "/images/black socks.avif",
+        name: "Get the socks of your type",
+        price: 5.5
+    },
+    {
+        img: "/images/black socks.avif",
+        name: "Get the socks of your type",
+        price: 5.5
+    }
+];
+
+let selectedItem = null;
+
+const cardsContainer = document.getElementById("cards_container");
+
+const renderCards = () => {
+    cardsContainer.innerHTML = '';
+    products.forEach(product => {
+        const cardItemDiv = document.createElement("div");
+        cardItemDiv.classList.add("card");
+   
+        cardItemDiv.innerHTML = `
+        <img class="product_image" src="${product.img}" alt="${product.name}"> <p class="caption">${product.name}</p> <div class="price_and_icon_container"><p class="price">$${product.price}</p>
+         <i class="fa-solid fa-cart-shopping add_to_cart"></i>
+        `
+        cardsContainer.appendChild(cardItemDiv);
+    });
+
+    const cards = document.querySelectorAll(".card");
+    if (cards) {
+    cards.forEach( (card, index) => {
+        card.onclick = () =>  showPopup(products[index]);
+        
+    });
+}
+}
+
+
+
+const showPopup = (product) => {
+    selectedItem = product;
+    const popupContainer = document.querySelector(".popup");
+    const popupCard = document.getElementById("popup_card");
+    
+
+    popupCard.innerHTML = '';
+
+    const popupPAndIContainer = document.createElement("div");
+    popupPAndIContainer.classList.add('price_and_icon_container');
+
+    let img = document.createElement("img");
+    img.src = product.img ;
+    img.className = 'product_image';
+
+    let caption = document.createElement("p");
+    caption.textContent = product.name;
+    caption.className= 'caption';
+
+    let price = document.createElement("p");
+    price.textContent = `$${product.price}`;
+    price.className = 'price';
+
+    popupPAndIContainer.append(price);
+    popupCard.append(img, caption, popupPAndIContainer);
+
+    
+    document.querySelector(".overlay").style.display = 'block';
+    popupContainer.style.display = 'block';
+}
+
+
+const closePopup = document.querySelector(".close_popup");
+closePopup.addEventListener('click', () => {
+    document.querySelector(".overlay").style.display = 'none';
+    document.querySelector(".popup").style.display = 'none';
+});
+
+document.querySelector(".overlay").addEventListener("click", () => {
+    document.querySelector(".overlay").style.display = 'none';
+    document.querySelector(".popup").style.display = 'none';
+});
+
+const toggleFeedback = () => {
+    const feedback = document.querySelector(".feedback");
+    const add = document.getElementById("add");
+
+    feedback.classList.add("show_feedback");
+    add.style.display = "none";
+    setTimeout(() => {
+        feedback.classList.remove("show_feedback");
+        add.style.display = "inline-flex";
+    },2000);
+}
+
+const updateCounter = () => {
+    const cart = JSON.parse(localStorage.getItem("shoppingCart") || '[]') ;
+    document.querySelector(".items_counter").textContent = cart.length;
+}
+
+document.getElementById("add_to_cart_btn").addEventListener("click", () => {
+            if (selectedItem) {
+                toggleFeedback();
+                const cart = JSON.parse(localStorage.getItem("shoppingCart")) || [];
+                cart.push(selectedItem);
+                localStorage.setItem("shoppingCart", JSON.stringify(cart));
+                updateCounter();
+            } else {
+                console.info("the selected Item isn't set properly !");
+            }
+           
+        });
+
+
+
+
+document.addEventListener('DOMContentLoaded', () => {
+    renderCards();
+    updateCounter()
+});
+
+          </script>
+</body>
+</html>

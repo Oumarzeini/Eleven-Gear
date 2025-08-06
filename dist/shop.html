@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>shop</title>
+    <link rel="icon" href="/images/logo.png">
+    <link rel="stylesheet" href="css/shop.css">
+    <script type="module" src="js/shop.js" defer></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css" integrity="sha512-DxV+EoADOkOygM4IR9yXP8Sb2qwgidEmeqAEmDKIOfPRQZOWbXCzLC6vjbZyy0vPisbH2SyW27+ddLVCN+OMzQ==" crossorigin="anonymous" referrerpolicy="no-referrer"/>
+</head>
+<body>
+   
+    <header>
+               <img class="top_logo" src="/images/logo_noBG.png" alt="logo" width="200" height="100">
+               <nav>
+                    <ul>
+                         <li onclick="window.location.href='index.html'">Home</li>
+                         <li id="open_s_btn">Search</li>
+                         <li class="my_cart" onclick="window.location.href='cart.html'">My Cart <span class="items_counter">0</span></li>
+                    </ul>
+               </nav>
+          </header>
+
+          <div id="search_bar_container" class="search_bar_container show_search_field">
+            <form id="search_form">
+                <input autocomplete="off" id="search_input" type="text" name="search" placeholder="search products">
+                <button id="search_btn" class="search_btn">
+                    Search
+                </button>
+                <button id="close_s_btn" class=" close_search_bar">
+                    x
+                </button>
+            </form>
+          </div>
+         
+          <div class="popup">
+                <i class="fa-solid fa-close close_popup"></i>
+                <div id="popup_card">
+                            
+                </div>
+                        <div id="add_to_cart_btn" class="add_to_cart_btn">
+                            <div class="feedback">
+                                <p>Item added to your cart </p>
+                                <img style="margin-right: 10px;" src="/gifs/wired-outline-146-trolley-hover-jump.gif" alt="" height="40" width="40">
+                            </div>
+                           <div id="add" class="add"> Add to cart <i class="fa-solid fa-cart-shopping add_to_cart"></i> </div>
+                        </div>
+                    </div>
+            
+
+          <div class="overlay"></div>
+
+          <main>
+
+            <section id="T-shirts_category" class="category fade">
+                <h1>T-shirts</h1>
+                <div id="t-shirts_card_container" class="cards_container">
+                   </div>
+            </section>
+
+            <section id="socks_category" class="category fade">
+                <h1>Socks</h1>
+                <div id="socks_card_container" class="cards_container">
+                  </div>
+            </section>
+
+            <section id="boots_category" class="category fade">
+                <h1>Boots</h1>
+                <div id="boots_card_container" class="cards_container"> </div>
+             </section>
+          </main>
+
+          <div class="spacer"></div>
+
+          <footer class="footer">
+               <div class="image_div">
+                    <img src="/images/logo_noBG.png" alt="">
+               </div>
+               <div class="company">
+                    <h2>Company</h2>
+                    <ul>
+                         <li>About</li>
+                         <li>Services</li>
+                         <li>Headquarters</li>
+                    </ul>
+               </div>
+               <div class="client">
+                    <h2>Client</h2>
+                    <ul>
+                         <li>Products</li>
+                         <li>Delivery</li>
+                         <li>Privacy policy</li>
+                    </ul>
+               </div>
+          </footer>
+</body>
+</html>

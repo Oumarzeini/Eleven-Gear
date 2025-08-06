@@ -1,0 +1,379 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --LIGHT-BLUE: rgb(193, 247, 245);
+}
+
+button {
+    cursor: pointer;
+}
+
+.my_cart {
+    white-space: nowrap;
+}
+
+html::-webkit-scrollbar {
+    display: none;
+}
+
+body {
+    font-family: system-ui;
+}
+
+header {
+    width: 100%;
+    height: 80px;
+    border-bottom: 2px dashed gray;
+    display: flex;
+    scroll-snap-align: start;
+}
+
+.top_logo {
+    width: 200px;
+    height: 60px;
+    margin-left: 1rem;
+    margin-top: .5rem;
+}
+
+nav {
+    width: 100%;
+    height: 100%;
+    display:flex;
+    justify-content: flex-end;
+}
+
+nav ul {
+    width: 50%;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-around;
+    align-items: center;
+}
+
+nav ul li {
+    list-style-type: none;
+    font-size: 1.2rem;
+    font-weight: 500;
+    cursor: pointer;
+}
+
+.my_cart {
+    padding: 10px;
+    border-radius: 10px;
+    background-color: black;
+    color: white;
+}
+
+.items_counter {
+    margin: 8px;
+    background-color: red;
+    padding: 4px;
+    padding-inline: 8px;
+    border-radius: 50%;
+}
+
+.overlay {
+    position: fixed;
+    background-color: rgb(0,0,0,0.5);
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    z-index: 100;
+    display: none;
+}
+
+.category {
+    min-height: 100vh;
+    display:flex;
+    flex-flow: column nowrap;
+    gap: 2rem;
+    padding: 10px;
+    scroll-snap-align: start;
+}
+
+.category h1 {
+    font-size: 3rem;
+    font-weight: 700;
+    letter-spacing: 1px;
+    margin: 1rem;
+}
+
+.cards_container {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-flow: row wrap;
+    align-items: center;
+    justify-content: space-around;
+    border-radius: 10px;
+    padding: 10px;
+    gap: 20px;
+}
+
+.cards_container .card {
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    padding: 15px;
+    border-radius: 15px;
+    box-shadow: 0 0 4px rgba(0, 0, 0, 0.343);
+    cursor: pointer;
+    width: 250px;
+    height: 360px;
+}
+
+.card img {
+    width: 200px;
+    height: 200px;
+    border-radius: 15px;
+}
+
+.caption, .price {
+    font-size: 1.3rem;
+    font-weight: 500;
+}
+
+.price_and_icon_container {
+    display: flex;
+    gap: 40px;
+    justify-content: center;
+    align-items: center;
+}
+
+.add_to_cart {
+    font-size: 1.3rem;
+    color: blueviolet;
+}
+
+.price {
+    color: green;
+}
+
+.popup {
+    width: 500px;
+    height: auto;
+    position: fixed;
+    top: 20%;
+    left: 50%;
+    transform: translate(-50%);
+    z-index: 100;
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    gap: 20px;
+    display: none;
+    z-index: 200;
+}
+
+#popup_card {
+    background-color: white;
+}
+
+.popup p {
+    margin: 1rem;
+    font-size: 1.2rem;
+}
+
+.close_popup {
+    background-color: red;
+    font-size: 1.2rem;
+    color: white;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    border-radius: 50%;
+    padding: 5px;
+    cursor: pointer;
+}
+
+#popup_card {
+    cursor: auto;
+}
+
+.add_to_cart_btn {
+    background-color: blueviolet;
+    color: white;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 10px;
+    margin: 1rem;
+    font-size: 1.2rem;
+    cursor: pointer;
+}
+
+.add_to_cart_btn .add_to_cart {
+    color: white;
+}
+
+.add {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 80%;
+}
+
+.feedback {
+    color: white;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    gap: 10px;
+    padding-inline: 10px;
+    width: 100%;
+    border-radius: 10px;
+    margin: auto;
+    z-index: 300;
+    display: none;
+    padding: 10px;
+}
+
+.show_feedback {
+    display:inline-flex;
+    padding: 10px;
+    transition: display 0.5s linear alternate-reverse;
+}
+
+.feedback p {
+    text-align: center;
+    font-size: 1.2rem;
+    font-weight: 600;
+}
+
+
+@media (max-width: 450px) {
+
+    .entity {
+        display: none;   
+    }
+    header {
+        height: 60px;
+    }
+
+    nav {
+        width: 100%;
+        height: 100%;
+        display:flex;
+        justify-content: space-around;
+    }
+
+    nav ul {
+        width: 50%;
+        display: flex;
+        flex-flow: row nowrap;
+        justify-content: space-around;
+        align-items: center;
+        gap: 20px;
+    }
+
+    nav ul li {
+        list-style-type: none;
+        font-size: 1rem;
+        font-weight: 500;
+    }
+
+    .my_cart {
+        font-size: 0.8rem;
+        padding: 10px;
+        border-radius: 10px;
+        background-color: black;
+        color: white;
+    }
+
+    .items_counter {
+        margin: 5px;
+        background-color: red;
+        padding: 4px;
+        padding-inline: 8px;
+        border-radius: 50%;
+    }
+
+    .top_logo {
+        width: 100px;
+        height: 50px;
+        margin-left: 1rem;
+    }
+
+    .category {
+        min-height: 100vh;
+        display:flex;
+        flex-flow: column nowrap;
+        padding: 10px;
+        position: relative;
+        scroll-snap-align: start;
+        margin-left: 0;
+        max-width: 80vw;
+        /* opacity: 0; */
+    }
+
+    .category h1 {
+        font-size: 3rem;
+        font-weight: 700;
+        letter-spacing: 1px;
+        margin-bottom: 0;
+    }
+
+    .cards_container {
+        width: 100%;
+        height: 100%;
+        display: grid;
+        grid-template-columns: repeat(2, auto);
+        border-radius: 10px;
+        padding: 10px;
+        row-gap: 30px;
+    }
+
+    .cards_container .card {
+        display: flex;
+        flex-flow: column nowrap;
+        justify-content: center;
+        align-items: center;
+        gap: 10px;
+        padding: 15px;
+        border-radius: 15px;
+        cursor: pointer;
+        width: 170px;
+        height: 250px;
+    }
+
+    .card img {
+        width: 130px;
+        height: 130px;
+        border-radius: 15px;
+    }
+
+    .caption, .price {
+        font-size: 1rem;
+        font-weight: 500;
+    }
+
+    .price {
+        color: green;
+    }
+
+    .popup {
+        width: 300px;
+    }
+
+    #popup_card img {
+        width: 200px;
+        height: auto;
+    }
+
+    .feedback p {
+        font-size: 1.1rem;
+        width: 200px;
+    }
+
+}

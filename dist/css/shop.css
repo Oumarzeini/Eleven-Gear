@@ -1,0 +1,602 @@
+Shop.css 
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --LIGHT-BLUE: rgb(193, 247, 245);
+}
+
+button {
+    cursor: pointer;
+}
+
+button:active {
+    scale: 0.9;
+}
+
+.no_wrap, .my_cart {
+    white-space: nowrap;
+}
+
+
+
+html::-webkit-scrollbar {
+    display: none;
+}
+
+body {
+    font-family: system-ui;
+    margin:  0;
+    /* background-color: rgb(23, 0, 19);
+    color: rgb(194, 192, 192); */
+    /* background-color: #121212;
+    color: #f5f5f5; */
+}
+
+header {
+    width: 100%;
+    height: 60px;
+    border-bottom: 2px dashed gray;
+    display: flex;
+}
+
+.top_logo {
+    width: 150px;
+    height: 50px;
+    margin-left: 1rem;
+    margin-top: .5rem;
+}
+
+nav {
+    width: 100%;
+    height: 100%;
+    display:flex;
+    justify-content: flex-end;
+}
+
+nav ul {
+    width: 50%;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-around;
+    align-items: center;
+}
+
+nav ul li {
+    list-style-type: none;
+    font-size: 1rem;
+    font-weight: 500;
+    cursor: pointer;
+}
+
+.my_cart {
+    padding: 10px;
+    border-radius: 10px;
+    background-color: black;
+    color: white;
+}
+
+.items_counter {
+    margin: 8px;
+    background-color: red;
+    padding: 4px;
+    padding-inline: 8px;
+    border-radius: 50%;
+}
+
+.overlay {
+    position: fixed;
+    background-color: rgb(0,0,0,0.5);
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    z-index: 100;
+    display: none;
+}
+
+main {
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+}
+
+.category {
+    min-height: 100vh;
+    display:flex;
+    flex-flow: column nowrap;
+    gap: 2rem;
+    padding: 10px;
+}
+
+.category h1 {
+    font-size: 3rem;
+    font-weight: 700;
+    letter-spacing: 1px;
+    margin: 1rem;
+}
+
+.cards_container {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-flow: row wrap;
+    align-items: center;
+    justify-content: space-evenly;
+    border-radius: 10px;
+    padding: 10px;
+    gap: 20px;
+}
+
+.cards_container .card {
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    padding: 15px;
+    border-radius: 15px;
+    box-shadow: 0 0 4px rgba(0, 0, 0, 0.343);
+    cursor: pointer;
+    width: 250px;
+    height: 360px;
+}
+
+.cards_container:hover .card:not(:hover) {
+    filter: blur(2px);
+    scale: 0.9;
+}
+.card:hover {
+    border: 2px solid purple;
+    scale: 1.1;
+    transform: translateX(20px);
+}
+
+.card:last-child:hover {
+    border: 2px solid purple;
+    scale: 1.1;
+    transform: translateX(-20px);
+}
+
+.card img {
+    width: 200px;
+    height: 200px;
+    border-radius: 15px;
+}
+
+.caption, .price {
+    font-size: 1.3rem;
+    font-weight: 500;
+}
+
+.price_and_icon_container {
+    display: flex;
+    gap: 40px;
+    justify-content: center;
+    align-items: center;
+}
+
+.add_to_cart {
+    font-size: 1.3rem;
+    color: blueviolet;
+}
+
+.price {
+    color: green;
+}
+
+.find_more {
+    font-size: 2rem;
+    background-color: black;
+    color: white;
+    width: fit-content;
+    padding: 10px;
+    border-radius: 10px;
+    padding-inline: 20px;
+    right: 80px;
+    bottom: 100px;
+    border: none;
+    outline: none;
+    font-weight: 600;
+}
+
+.popup {
+    width: 500px;
+    height: auto;
+    position: fixed;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 100;
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    gap: 20px;
+    display: none;
+    z-index: 200;
+}
+
+#popup_card {
+    background-color: white;
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    padding: 15px;
+    border-radius: 15px;
+    max-width: 90%;
+    max-height: 400px;
+    margin: auto;
+    cursor: auto;
+}
+
+#popup_card img {
+    width: 200px;
+    height: auto;
+}
+
+.popup p {
+    font-size: 1.2rem;
+}
+
+.close_popup {
+    background-color: red;
+    font-size: 1.2rem;
+    color: white;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    border-radius: 50%;
+    padding: 5px;
+    cursor: pointer;
+}
+
+
+
+.add_to_cart_btn {
+    background-color: blueviolet;
+    color: white;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 10px;
+    margin: 1rem;
+    font-size: 1.2rem;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.add_to_cart_btn:active {
+    scale: 0.9;
+}
+
+.add_to_cart_btn .add_to_cart {
+    color: white;
+}
+
+.add {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 80%;
+}
+
+.feedback {
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    padding-inline: 10px;
+    width: 100%;
+    border-radius: 10px;
+    margin: auto;
+    z-index: 300;
+    display: none;
+}
+
+.show_feedback {
+    display:inline-flex;
+    transition: display 0.5s linear alternate-reverse;
+}
+
+.feedback p {
+    text-align: center;
+    font-size: 1.2rem;
+    font-weight: 600;
+}
+
+.search_bar_container {
+    width: 100%;
+    height: 60px;
+    background-color: black;
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 500;
+    display: none;
+}
+
+form {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+
+input {
+    width: 400px;
+    height: 20px;
+    border-radius: 10px;
+    outline: none;
+    border: none;
+    padding: 10px;
+    font-size: 14px;
+}
+
+.search_btn {
+    width: 100px;
+    height: auto;
+    outline: none;
+    border: none;
+    padding: 10px;
+    background-color: white;
+    border-radius: 10px;
+}
+
+.close_search_bar {
+    width: 40px;
+    font-size: 2rem;
+    background-color: white;
+    border-radius: 50%;
+    outline: none;
+    border: none;
+    display: grid;
+    place-content: center;
+}
+
+.show_search_field {
+    height: 60px;
+    transition: height 0.5s linear alternate;
+}
+
+.spacer {
+    min-height: 30vh;
+    width: 100%;
+}
+
+footer {
+    height: 50vh;
+    background-image: linear-gradient(to bottom, rgb(83, 82, 82) , black);
+    border-top-right-radius: 50px;
+    border-top-left-radius: 50px ;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    padding: 10px;
+    color: wheat;
+}
+
+.company, .client {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    & h2 {
+        color: white;
+    }
+    & ul {
+        list-style-type: none;
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+    }
+    & li {
+        text-decoration: underline;
+    }
+}
+
+.image_div img {
+    max-width: 80%;
+    height: auto;
+}
+
+
+
+
+@media (max-width: 450px) {
+
+    .entity {
+        display: none;   
+    }
+    header {
+        height: 60px;
+    }
+
+    nav {
+        width: 100%;
+        height: 100%;
+        display:flex;
+        justify-content: space-evenly;
+    }
+
+    nav ul {
+        width: 80%;
+        display: flex;
+        flex-flow: row nowrap;
+        justify-content: space-between;
+        align-items: center;
+        gap: 25px;
+        margin-right: 8px;
+    }
+
+    nav ul li {
+        list-style-type: none;
+        font-size: 1rem;
+        font-weight: 500;
+    }
+
+    .my_cart {
+        font-size: 0.8rem;
+        padding: 10px;
+        border-radius: 10px;
+        background-color: black;
+        color: white;
+    }
+
+    .items_counter {
+        margin: 0;
+        background-color: red;
+        padding: 4px;
+        padding-inline: 8px;
+        border-radius: 50%;
+    }
+
+    .top_logo {
+        width: 100px;
+        height: 50px;
+        margin-right: 0;
+        margin-left: 5px;
+    }
+
+    .category {
+        min-height: 100vh;
+        width: 100%;
+        display:flex;
+        flex-flow: column nowrap;
+        padding: 10px;
+        position: relative;
+        margin-left: 0;
+        max-width: 80vw;
+        /* opacity: 0; */
+    }
+
+    .category h1 {
+        font-size: 3rem;
+        font-weight: 700;
+        letter-spacing: 1px;
+        margin-bottom: 0;
+    }
+
+    .cards_container {
+        width: 100%;
+        height: 100%;
+        display: grid;
+        grid-template-columns: repeat(2, auto);
+        border-radius: 10px;
+        padding: 10px;
+        row-gap: 30px;
+    }
+
+    .cards_container .card {
+        display: flex;
+        flex-flow: column nowrap;
+        justify-content: center;
+        align-items: center;
+        gap: 10px;
+        padding: 15px;
+        border-radius: 15px;
+        cursor: pointer;
+        width: 140px;
+        height: 250px;
+    }
+
+    .card img {
+        width: 130px;
+        height: 130px;
+        border-radius: 15px;
+    }
+
+    .caption, .price {
+        font-size: 1rem;
+        font-weight: 500;
+    }
+
+    .price {
+        color: green;
+    }
+
+    .find_more {
+        font-size: 1.2rem;
+        background-color: black;
+        color: white;
+        width: fit-content;
+        padding: 10px;
+        border-radius: 10px;
+        padding-inline: 20px;
+        border: none;
+        outline: none;
+        font-weight: 600;
+        
+    }
+
+    .popup {
+        width: 300px;
+    }
+
+    #popup_card img {
+        width: 200px;
+        height: auto;
+    }
+
+    .feedback p {
+        font-size: 1.1rem;
+        width: 200px;
+    }
+
+    input {
+        width: 50%;
+    }
+
+    footer {
+        height: 40vh;
+        width: auto;
+        background-image: linear-gradient(to bottom, rgb(83, 82, 82) , black);
+        border-top-right-radius: 50px;
+        border-top-left-radius: 50px ;
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+        gap: 20px;
+        padding: 10px;
+        color: wheat;
+        /* scroll-snap-align: start; */
+    }
+
+    .company, .client {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        & h2 {
+            color: white;
+            text-align: center;
+            margin: 0;
+        }
+        & ul {
+            list-style-type: none;
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+        & li {
+            text-decoration: underline;
+        }
+    }
+
+.image_div  {
+    display: none;
+}
+
+}

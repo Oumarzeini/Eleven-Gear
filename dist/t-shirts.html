@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>t-shirts</title>
+    <link rel="icon" href="/images/logo.png">
+    <link rel="stylesheet" href="css/shop.css">
+    <!-- <link rel="stylesheet" href="css/t-shirts.css"> -->
+    <script src="js/products.js" defer></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css" integrity="sha512-DxV+EoADOkOygM4IR9yXP8Sb2qwgidEmeqAEmDKIOfPRQZOWbXCzLC6vjbZyy0vPisbH2SyW27+ddLVCN+OMzQ==" crossorigin="anonymous" referrerpolicy="no-referrer"/>
+</head>
+<body>
+
+    <header>
+               <img class="top_logo" src="/images/logo_noBG.png" alt="logo" width="200" height="100">
+               <nav>
+                    <ul>
+                         <li onclick="window.location.href='index.html'">Home</li>
+                         <li onclick="window.location.href='shop.html'">Shop</li>
+                         <li class="my_cart" onclick="window.location.href='cart.html'">My Cart <span class="items_counter">0</span></li>
+                    </ul>
+               </nav>
+          </header>
+
+          <div class="popup">
+                <i class="fa-solid fa-close close_popup"></i>
+                <div id="popup_card">
+                        
+                        </div>
+                        
+                        <div id="add_to_cart_btn" class="add_to_cart_btn">
+                            <div class="feedback">
+                                <p>Item added to your cart </p>
+                                <img style="margin-right: 10px;" src="/gifs/wired-outline-146-trolley-hover-jump.gif" alt="" height="40" width="40">
+                            </div>
+                           <div id="add" class="add"> Add to cart <i class="fa-solid fa-cart-shopping add_to_cart"></i> </div>
+                        </div>
+
+
+                    </div>
+
+                    <div class="feedback_container">
+                        <!-- <p>Item added to your cart</p>
+                    </div> -->
+
+          <div class="overlay"></div>
+          <main>
+
+
+            <section class="category fade">
+                <h1>T-shirts</h1>
+                <div id="cards_container" class="cards_container">
+
+                </div>
+
+               
+            </section>
+          </main>
+
+          
+
+</body>
+</html>
