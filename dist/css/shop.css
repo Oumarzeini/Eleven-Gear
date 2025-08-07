@@ -145,22 +145,6 @@ main {
     height: 360px;
 }
 
-.cards_container:hover .card:not(:hover) {
-    filter: blur(2px);
-    scale: 0.9;
-}
-.card:hover {
-    border: 2px solid purple;
-    scale: 1.1;
-    transform: translateX(20px);
-}
-
-.card:last-child:hover {
-    border: 2px solid purple;
-    scale: 1.1;
-    transform: translateX(-20px);
-}
-
 .card img {
     width: 200px;
     height: 200px;
